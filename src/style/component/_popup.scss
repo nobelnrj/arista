@@ -60,6 +60,8 @@
   &_image_container {
     width: 40%;
     overflow: hidden;
+    border-top-left-radius: 17px;
+    border-bottom-left-radius: 17px;
     @include bp(phone) {
       width: 100%;
       position: absolute;

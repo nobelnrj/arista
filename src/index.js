@@ -1,4 +1,5 @@
 /** @format */
+import "./images/favicon.ico";
 import "./style/main.scss";
 
 import "./script/Animate";
