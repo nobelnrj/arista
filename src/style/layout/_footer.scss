@@ -1,0 +1,42 @@
+.footer {
+  background-color: rgb(78,78,78);
+  padding: 5px 0;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #fff;
+  @include bp(phone) {
+    font-size: 12px;
+    padding: 10px 0;
+  }
+  &_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include bp(phone) {
+      flex-direction: column;
+    }
+  }
+  &_left {
+    @include bp(phone) {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #fff;
+    }
+  }
+  .social_icon {
+    margin-right: 20px;
+    svg {
+      width: 15px;
+      height: 15px;
+      fill: #fff;
+      transition: transform 1s ease;
+      &:hover {
+        transform: rotate(360deg);
+      }
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}

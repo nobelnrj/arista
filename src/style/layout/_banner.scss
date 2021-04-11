@@ -1,0 +1,110 @@
+.page-banner {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  @include bp (laptop) {
+    flex-direction: column;
+  }
+  &_image_wrapper {
+    width: 45%;
+    position: relative;
+    @include bp(laptop) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  &_content_wrapper {
+    width: 55%;
+    @include bp(phone) {
+      width: 100%;
+    }
+  }
+  &_image_main {
+    width: 100%;
+  }
+  &_image_sub {
+    width: 46%;
+    position: absolute;
+    right: -100px;
+    bottom: 50px;
+    @include bp(laptop) {
+      width: 35%;
+      right: -32px;
+      bottom: -100px;
+    }
+  }
+  &_image_content {
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    @include bp(laptop) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+    }
+    @include bp(phone) {
+      min-width: 250px;
+    }
+    h2 {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 300;
+      margin-bottom: 15px;
+      @include bp(laptop) {
+        font-size: 50px;
+      }
+      @include bp(phone) {
+        font-size: 30px;
+      }
+    }
+    p {
+      color: #fff;
+      font-size: 20px;
+      @include bp(laptop) {
+        font-size: 30px;
+      }
+      @include bp(phone) {
+        font-size: 16px;
+      }
+    }
+  }
+  &_content_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  &_content {
+    max-width: 430px;
+    margin: 0 auto;
+    @include bp(phone) {
+      max-width: 320px;
+    }
+  }
+  &_content_image {
+    width: 70%;
+    margin-bottom: 15px;
+  }
+  &_content_author {
+    color: rgba($brand-color,0.7);
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 25px;
+    &::before {
+      content: '';
+      position: absolute;
+      height: 1px;
+      width: 20px;
+      background-color: rgba($brand-color,0.7);
+      left: 0;
+      top: 50%;
+    }
+  }
+  &_content_description {
+    color: #777;
+    line-height: 27px;
+
+  }
+}
